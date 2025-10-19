@@ -15,6 +15,7 @@ app.use(
   cors({
     origin: [
       "https://joinmeetup-client.vercel.app",
+      "https://joinmeetup-client-r5f6.vercel.app",
       "http://localhost:3000",
       "http://localhost:3001",
     ],
