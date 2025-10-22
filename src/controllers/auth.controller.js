@@ -73,6 +73,7 @@ exports.verifyOtp = async (req, res) => {
         httpOnly: true,
         secure: true,
         sameSite: "none",
+        domain: ".vercel.app", 
         maxAge: 30 * 24 * 60 * 60 * 1000,
       })
       .status(200)
@@ -106,6 +107,7 @@ exports.google = async (req, res, next) => {
         httpOnly: true,
         secure: true,
         sameSite: "none",
+        domain: ".vercel.app", 
         maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
       })
       .status(200)
@@ -142,6 +144,7 @@ exports.logout = async (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: "none",
+       domain: ".vercel.app", 
       path: "/", // optional, but safest
     })
     .json({ success: true, message: "Logged out successfully" });
